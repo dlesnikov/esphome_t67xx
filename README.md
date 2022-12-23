@@ -14,7 +14,29 @@ Supported sensors:
 - CO2
 
 ## Examples
-_TBD_
+
+### Simple example configuration entry
+
+```yaml
+# use default i2c settings for your platform/board
+i2c:
+
+# append this component from github
+external_components:
+  - source: github://yellow-sky/esphome_t67xx
+    components: [ t67xx_i2c ]
+
+# define co2 sensor
+sensor:
+  platform: t67xx_i2c
+  co2:
+    name: "T6703 CO2 Value"
+    id: T6703_co2
+  update_interval: 10s
+
+
+
+```
 
 ## Datasheet links
 - https://f.hubspotusercontent40.net/hubfs/9035299/Documents/AAS-916-142A-Telaire-T67xx-CO2-Sensor-022719-web.pdf  
