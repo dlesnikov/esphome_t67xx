@@ -33,10 +33,8 @@ sensor:
     name: "T6703 CO2 Value"
     id: T6703_co2
   update_interval: 10s
-
-
-
 ```
+More examples: https://github.com/yellow-sky/esphome_t67xx/tree/main/examples  
 
 ## Datasheet links
 - https://f.hubspotusercontent40.net/hubfs/9035299/Documents/AAS-916-142A-Telaire-T67xx-CO2-Sensor-022719-web.pdf  
