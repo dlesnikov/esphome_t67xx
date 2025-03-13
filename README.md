@@ -1,4 +1,4 @@
-# ESPHome Telaire T67xx sensors component
+# ESPHome Telaire T67xx sensors component with calibration
 
 ## Features
 
@@ -9,7 +9,7 @@ Supported sensor modules:
 
 Supported interfaces:
 - I<sup>2</sup>C (Wire)
-  
+
 Supported sensors:
 - CO2
 
@@ -23,19 +23,19 @@ i2c:
 
 # append this component from github
 external_components:
-  - source: github://yellow-sky/esphome_t67xx
-    components: [ t67xx_i2c ]
+  - source: github://dlesnikov/esphome_t67xx
+    components: [ t67xx_i2cc ]
 
 # define co2 sensor
 sensor:
-  platform: t67xx_i2c
+  platform: t67xx_i2cc
   co2:
     name: "T6703 CO2 Value"
     id: T6703_co2
   update_interval: 10s
 ```
-More examples: https://github.com/yellow-sky/esphome_t67xx/tree/main/examples  
+More examples: https://github.com/yellow-sky/esphome_t67xx/tree/main/examples
 
 ## Datasheet links
-- https://f.hubspotusercontent40.net/hubfs/9035299/Documents/AAS-916-142A-Telaire-T67xx-CO2-Sensor-022719-web.pdf  
-- https://www.mouser.com/catalog/additional/Telaire_T6700_Series_CO2_sensor_Module_Application_Note.pdf  
+- https://f.hubspotusercontent40.net/hubfs/9035299/Documents/AAS-916-142A-Telaire-T67xx-CO2-Sensor-022719-web.pdf
+- https://www.mouser.com/catalog/additional/Telaire_T6700_Series_CO2_sensor_Module_Application_Note.pdf
